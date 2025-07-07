@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+
+contract MemoryArray {
+    function getElement(uint index) public pure returns (uint) {
+        require(index < 10, "Index out of range");
+
+       
+        uint[10] memory arr = [
+            uint(10), 20, 30, 40, 50, 60, 70, 80, 90, 100
+        ];
+
+        return arr[index];          // read-only, costs very little gas
+    }
+}

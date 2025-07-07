@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ZK Proof Verifier</title>
+  <style>
+    textarea { width: 100%; height: 60px; }
+    input[type="text"] { width: 100%; }
+    body { font-family: Arial; max-width: 700px; margin: auto; }
+    button { padding: 10px 20px; margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <h2>ZK Proof Verifier (Groth16)</h2>
+
+  <label>A (2 values):</label>
+  <input type="text" id="a" placeholder='["0x...", "0x..."]' />
+
+  <label>B (2x2 values):</label>
+  <input type="text" id="b" placeholder='[["0x...", "0x..."], ["0x...", "0x..."]]' />
+
+  <label>C (2 values):</label>
+  <input type="text" id="c" placeholder='["0x...", "0x..."]' />
+
+  <label>Public Inputs (array):</label>
+  <textarea id="input" placeholder='["0x...", "0x..."]'></textarea>
+
+  <button onclick="verify()">Verify Proof</button>
+
+  <h3 id="result"></h3>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
